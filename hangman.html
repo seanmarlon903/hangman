@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+ </head>
+<body>
+<h1>Hangman Game</h1>
+<div id="game-card">
+  <div id="category-badge">Category</div>
+  <div id="hint">Hint: ...</div>
+
+  <svg id="canvas-wrap" width="200" height="190">
+    <line x1="20" y1="182" x2="180" y2="182" stroke="#555" stroke-width="3"/>
+    <line x1="50" y1="182" x2="50"  y2="10"  stroke="#555" stroke-width="3"/>
+    <line x1="50" y1="10"  x2="100" y2="10"  stroke="#555" stroke-width="3"/>
+    <line x1="100" y1="10" x2="100" y2="18"  stroke="#555" stroke-width="3"/>
+    <circle id="p0" cx="100" cy="38" r="20" stroke="#333" stroke-width="3" fill="none" style="display:none"/>
+    <line id="p1" x1="100" y1="58"  x2="100" y2="120" stroke="#333" stroke-width="3" style="display:none"/>
+    <line id="p2" x1="100" y1="74"  x2="62"  y2="104" stroke="#333" stroke-width="3" style="display:none"/>
+    <line id="p3" x1="100" y1="74"  x2="138" y2="104" stroke="#333" stroke-width="3" style="display:none"/>
+    <line id="p4" x1="100" y1="120" x2="62"  y2="162" stroke="#333" stroke-width="3" style="display:none"/>
+    <line id="p5" x1="100" y1="120" x2="138" y2="162" stroke="#333" stroke-width="3" style="display:none"/>
+  </svg>
+
+  <div id="mistakes">Mistakes: 0 / 6</div>
+  <div id="word-label">Word:</div>
+  <div id="word-display"></div>
+
+  <!-- Keyboard: A-Z hardcoded as divs -->
+  <div id="keyboard">
+    <div class="key" id="key-A" onclick="guess('A')">A</div>
+    <div class="key" id="key-B" onclick="guess('B')">B</div>
+    <div class="key" id="key-C" onclick="guess('C')">C</div>
+    <div class="key" id="key-D" onclick="guess('D')">D</div>
+    <div class="key" id="key-E" onclick="guess('E')">E</div>
+    <div class="key" id="key-F" onclick="guess('F')">F</div>
+    <div class="key" id="key-G" onclick="guess('G')">G</div>
+    <div class="key" id="key-H" onclick="guess('H')">H</div>
+    <div class="key" id="key-I" onclick="guess('I')">I</div>
+    <div class="key" id="key-J" onclick="guess('J')">J</div>
+    <div class="key" id="key-K" onclick="guess('K')">K</div>
+    <div class="key" id="key-L" onclick="guess('L')">L</div>
+    <div class="key" id="key-M" onclick="guess('M')">M</div>
+    <div class="key" id="key-N" onclick="guess('N')">N</div>
+    <div class="key" id="key-O" onclick="guess('O')">O</div>
+    <div class="key" id="key-P" onclick="guess('P')">P</div>
+    <div class="key" id="key-Q" onclick="guess('Q')">Q</div>
+    <div class="key" id="key-R" onclick="guess('R')">R</div>
+    <div class="key" id="key-S" onclick="guess('S')">S</div>
+    <div class="key" id="key-T" onclick="guess('T')">T</div>
+    <div class="key" id="key-U" onclick="guess('U')">U</div>
+    <div class="key" id="key-V" onclick="guess('V')">V</div>
+    <div class="key" id="key-W" onclick="guess('W')">W</div>
+    <div class="key" id="key-X" onclick="guess('X')">X</div>
+    <div class="key" id="key-Y" onclick="guess('Y')">Y</div>
+    <div class="key" id="key-Z" onclick="guess('Z')">Z</div>
+  </div>
+</div>
+
+<!-- Win / Lose Modal -->
+<div id="modal">
+  <div id="modal-box">
+    <div id="modal-icon">🏆</div>
+    <div id="modal-title">You Win!</div>
+    <div id="modal-word"></div>
+    <button id="next-btn" onclick="newGame()">Next Word</button>
+  </div>
+</div>
+
+</body>
+</html>

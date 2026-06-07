@@ -1,0 +1,26 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#eef2f7;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:24px 20px 40px}
+h1{font-size:28px;color:#222;text-align:center;margin:0 0 18px}
+#game-card{width:100%;max-width:620px;background:#fff;border:1px solid #d8dee8;border-radius:14px;padding:20px}
+#category-badge{display:inline-block;padding:6px 12px;background:#eef4ff;color:#334155;border-radius:999px;font-weight:700;margin-bottom:12px}
+#hint{color:#556;font-size:.95rem;font-style:italic;margin-bottom:16px}
+#canvas-wrap{display:block;margin:0 auto 18px;border-radius:10px;background:#fff}
+#mistakes{font-weight:700;color:#c0392b;margin-bottom:16px}
+#word-label{font-size:.95rem;color:#374151;margin-bottom:8px;text-align:center}
+#word-display{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;font-size:28px;font-weight:800;color:#1b1b1b;min-height:46px;margin-bottom:18px}
+.letter-box{width:34px;height:44px;border-bottom:2px solid #374151;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:800;color:#1b1b1b}
+.letter-box.revealed{color:#111}
+#keyboard{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.key{width:40px;height:40px;border-radius:8px;border:1px solid #ccc;background:#f4f6f8;display:flex;align-items:center;justify-content:center;font-weight:700;color:#111;cursor:pointer;transition:background .2s}
+.key:hover{background:#e6eaf0}
+.key.correct{background:#2d8a4f;color:#fff;border-color:#256038;cursor:default}
+.key.wrong{background:#c0392b;color:#fff;border-color:#8a1f1f;cursor:default}
+#modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);align-items:center;justify-content:center;padding:16px}
+#modal.show{display:flex}
+#modal-box{width:100%;max-width:380px;padding:24px 20px;border-radius:14px;background:#fff;text-align:center}
+#modal-icon{font-size:3rem;margin-bottom:12px}
+#modal-title{font-size:1.5rem;font-weight:800;color:#111;margin-bottom:10px}
+#modal-word{color:#475569;margin-bottom:16px}
+#next-btn{padding:10px 24px;border:none;border-radius:10px;background:#285fad;color:#fff;font-weight:700;cursor:pointer}
+#next-btn:hover{background:#1f4f8a}
+@media(max-width:480px){#keyboard{gap:6px}.key{width:32px;height:32px;font-size:.9rem}#word-display{font-size:22px;gap:8px}}
