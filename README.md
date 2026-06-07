@@ -4,7 +4,7 @@ A fun and interactive Hangman game built with HTML, CSS, and JavaScript!
 
 ## 🎮 Play the Game
 
-**[Play Hangman Here](https://github.com/seanmarlon903/hangman)**
+**[Play Hangman Here](https://seanmarlon903.github.io/hangman/hangman.html)**
 
 Simply click the link above to start playing! Guess the word letter by letter before running out of attempts.
 
